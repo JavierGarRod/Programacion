@@ -1,4 +1,4 @@
-package programacion.Tema1.ActividadesU1Java.Excepciones.Ej1;
+package programacion.Tema1.ActividadesU1Java.Excepciones.Boletin1.Ej1;
 
 public class Gestiona {
     public static void main(String[] args) {

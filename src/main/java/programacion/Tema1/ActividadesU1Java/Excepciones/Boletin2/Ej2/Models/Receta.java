@@ -1,7 +1,7 @@
-package programacion.Tema1.ActividadesU1Java.Excepciones.Ej2.Models;
+package programacion.Tema1.ActividadesU1Java.Excepciones.Boletin2.Ej2.Models;
 
 
-import programacion.Tema1.ActividadesU1Java.Excepciones.Ej2.Exceptions.CocinaException;
+import programacion.Tema1.ActividadesU1Java.Excepciones.Boletin2.Ej2.Exceptions.CocinaException;
 
 public class Receta {
 
@@ -9,7 +9,7 @@ public class Receta {
     private int id;
     private static int contador;
     private String nombre;
-    private String[] ingredientes;
+    private String[] ingredientes; // mejor ingrediente[] ingredientes
     private double [] cantidades;
 
     private int numIngredientes;
@@ -36,9 +36,11 @@ public class Receta {
 
     }
 
-    public void cocinar(int comensales) throws CocinaException {
+    public double[] cocinar(int comensales) throws CocinaException {
+        double[] tabla = new double[30];
+
         if(comensales <= 0){
-            System.out.println("\nNúmero de comensales inválido");
+            throw new CocinaException("\nNúmero de comensales inválido");
         }
         else if (comensales > 1000){
             throw new CocinaException("\nNúmero de comensales inválido");
@@ -47,10 +49,11 @@ public class Receta {
             System.out.println("\nCocinando "+ nombre + " para " + comensales + " comensales:");
 
             for (int i = 0; i < numIngredientes; i++) {
-                double total = cantidades[i] * comensales;
-                System.out.println("- " + ingredientes[i] + ": " + total);
+                tabla [i]  = cantidades[i] * comensales;
+                System.out.println("- " + ingredientes[i] + ": " + tabla[i]);
             }
         }
+        return tabla;
     }
 
     //getters y setters

@@ -1,6 +1,9 @@
 package programacion.Tema1.ActividadesU1Java.Estatico.Ejercicio2.Controller;
 
-import src.programacion.Tema1.ActividadesU1Java.Estatico.Ejercicio2.Modelo.*;
+import programacion.Tema1.ActividadesU1Java.Estatico.Ejercicio2.Modelo.Loro;
+import programacion.Tema1.ActividadesU1Java.Estatico.Ejercicio2.Modelo.Mascotas;
+import programacion.Tema1.ActividadesU1Java.Estatico.Ejercicio2.Modelo.Perro;
+
 import java.time.LocalDate;
 
 public class Gestiona {

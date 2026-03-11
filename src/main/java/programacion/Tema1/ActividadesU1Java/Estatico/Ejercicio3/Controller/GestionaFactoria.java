@@ -1,6 +1,9 @@
 package programacion.Tema1.ActividadesU1Java.Estatico.Ejercicio3.Controller;
 
-import src.programacion.Tema1.ActividadesU1Java.Estatico.Ejercicio3.Modelo.*;
+
+import programacion.Tema1.ActividadesU1Java.Estatico.Ejercicio3.Modelo.Estado;
+import programacion.Tema1.ActividadesU1Java.Estatico.Ejercicio3.Modelo.Robots;
+import programacion.Tema1.ActividadesU1Java.Estatico.Ejercicio3.Modelo.RobotsSoldador;
 
 public class GestionaFactoria {
     static void main() {

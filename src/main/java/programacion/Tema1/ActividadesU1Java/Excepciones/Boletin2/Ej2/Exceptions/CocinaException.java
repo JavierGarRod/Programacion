@@ -1,4 +1,4 @@
-package programacion.Tema1.ActividadesU1Java.Excepciones.Ej2.Exceptions;
+package programacion.Tema1.ActividadesU1Java.Excepciones.Boletin2.Ej2.Exceptions;
 
 public class CocinaException extends Exception{
 

@@ -1,9 +1,10 @@
-package programacion.Tema1.ActividadesU1Java.Excepciones.Ej2.Controllers;
+package programacion.Tema1.ActividadesU1Java.Excepciones.Boletin2.Ej2.Controllers;
 
 
-import programacion.Tema1.ActividadesU1Java.Excepciones.Ej2.Exceptions.CocinaException;
-import programacion.Tema1.ActividadesU1Java.Excepciones.Ej2.Models.Receta;
-import programacion.Tema1.ActividadesU1Java.Excepciones.Ej2.Models.Recetario;
+import programacion.Tema1.ActividadesU1Java.Excepciones.Boletin2.Ej2.Exceptions.CocinaException;
+import programacion.Tema1.ActividadesU1Java.Excepciones.Boletin2.Ej2.Exceptions.RecetarioException;
+import programacion.Tema1.ActividadesU1Java.Excepciones.Boletin2.Ej2.Models.Receta;
+import programacion.Tema1.ActividadesU1Java.Excepciones.Boletin2.Ej2.Models.Recetario;
 
 public class GestorRecetario {
     public static void main(String[] args) {
@@ -29,15 +30,25 @@ public class GestorRecetario {
 
         // Caso 1: bien :)
         try {
-            recetario.buscar("Pasta").cocinar(3); //pongo juntos los dos métodos porque usan la misma excepción
-        } catch (CocinaException e) {                               // esto es lo mismo que Receta r = recetario.buscar("Pasta"); r.cocinar(3);
+            Receta r = recetario.buscar("Pasta");
+            r.cocinar(3);
+
+        } catch (CocinaException e) {
+            System.out.println(e);
+        }
+        catch (RecetarioException e) {
             System.out.println(e);
         }
 
         // Caso 2: comensales inválidos
+        System.out.println("\n");
+
         try {
             recetario.buscar("Ensalada").cocinar(0);
         } catch (CocinaException e) {
+            System.out.println(e);
+        }
+        catch (RecetarioException e) {
             System.out.println(e);
         }
 
@@ -50,12 +61,15 @@ public class GestorRecetario {
             System.out.println(e);
         }
 
-        // Caso 4: receta no existe (CocinaException: La receta Tarta no existe en el recetario)
+        // Caso 4: receta no existe (RecetarioException: Esa receta no existe :l)
         System.out.println("\n");
 
         try {
             recetario.buscar("Tarta").cocinar(2);
         } catch (CocinaException e) {
+            System.out.println(e);
+        }
+        catch (RecetarioException e) {
             System.out.println(e);
         }
         System.out.println("\nHoli, yo sigo por aquí siempre PORQUE SOY FINALBATMAN");

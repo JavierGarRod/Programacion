@@ -1,5 +1,6 @@
 package programacion.Tema1.ActividadesU1Java.Simulacro.incidencia.Contoller;
-import src.programacion.Tema1.ActividadesU1Java.Simulacro.incidencia.Modelo.*;
+
+import programacion.Tema1.ActividadesU1Java.Simulacro.incidencia.Modelo.Equipo;
 
 public class GestionaIncidenciasEquipo {
     static void main() {
