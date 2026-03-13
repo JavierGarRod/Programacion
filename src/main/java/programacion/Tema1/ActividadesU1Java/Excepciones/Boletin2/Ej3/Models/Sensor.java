@@ -79,7 +79,7 @@ public class Sensor {
             anomala=true;
         }
 
-        historial[contadorLectura]=new Lectura(horaYfecha, cantidad, anomala);
+        historial[contadorLectura]=new Lectura(cantidad, horaYfecha, anomala);
         contadorLectura++;
     }
 
