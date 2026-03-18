@@ -3,7 +3,12 @@ package programacion.Tema1.ActividadesU1Java.Interfaces.Refactoriza;
 public class Gestiona {
     static void main() {
         PersonaRefactoriza[] tabla=new PersonaRefactoriza[10];
-        PersonaRefactoriza p=new PersonaRefactoriza("Maria");
+        PersonaRefactoriza p= new PersonaRefactoriza("Maria") {
+            @Override
+            public void trabaja(int contador) {
+
+            }
+        };
         Estudiante e=new Estudiante("Estudio");
         EstudianteEmpleado eempl=new EstudianteEmpleado("Estudiante y empleado");
         Artista a=new Artista("artista");

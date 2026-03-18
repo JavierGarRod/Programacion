@@ -5,7 +5,7 @@ public abstract class PersonaRefactoriza {
     static PersonaRefactoriza[] tabla=new PersonaRefactoriza[10];
     int contador=0;
 
-    public PersonaRefactoriza(String nombre, int contador) {
+    public PersonaRefactoriza(String nombre) {
         this.nombre = nombre;
         this.contador = contador;
     }
@@ -23,8 +23,8 @@ class Empleado extends PersonaRefactoriza {
         System.out.println(nombre + " está trabajando.");
     }
 
-    public Empleado(String nombre, int contador) {
-        super(nombre, contador);
+    public Empleado(String nombre) {
+        super(nombre);
     }
 
     @Override
@@ -41,8 +41,8 @@ class Cliente extends PersonaRefactoriza {
         System.out.println(nombre + " está comprando.");
     }
 
-    public Cliente(String nombre, int contador) {
-        super(nombre, contador);
+    public Cliente(String nombre) {
+        super(nombre);
     }
 
     @Override
@@ -60,8 +60,8 @@ class Estudiante extends PersonaRefactoriza {
         System.out.println(nombre + " está estudiando.");
     }
 
-    public Estudiante(String nombre, int contador) {
-        super(nombre, contador);
+    public Estudiante(String nombre) {
+        super(nombre);
     }
 
     @Override
@@ -77,8 +77,8 @@ class EstudianteEmpleado extends Estudiante {
         System.out.println(nombre + " está estudiando y trabajando.");
     }
 
-    public EstudianteEmpleado(String nombre, int contador) {
-        super(nombre, contador);
+    public EstudianteEmpleado(String nombre) {
+        super(nombre);
     }
 
     @Override
@@ -94,8 +94,8 @@ class Artista extends PersonaRefactoriza {
         System.out.println(nombre + " está pintando.");
     }
 
-    public Artista(String nombre, int contador) {
-        super(nombre, contador);
+    public Artista(String nombre) {
+        super(nombre);
     }
 
     @Override
