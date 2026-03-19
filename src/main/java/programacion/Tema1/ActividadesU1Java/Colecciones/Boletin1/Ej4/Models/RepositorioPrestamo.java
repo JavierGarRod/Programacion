@@ -10,7 +10,7 @@ public class RepositorioPrestamo {
     private int contadorId = 1;
 
     public void agregarPrestamo(Libro libro, String usuario) {
-        if (libro.getEstado() == Libro.Estado.PRESTADO) {
+        if (libro.getEstado() == EstadoLibro.PRESTADO) {
             System.out.println("No es posible realizar el préstamo de un libro que ya está prestado.");
             return;
         }
@@ -23,16 +23,16 @@ public class RepositorioPrestamo {
         }
 
         historial.add(nuevo);
-        libro.setEstado(Libro.Estado.PRESTADO);
+        libro.setEstado(EstadoLibro.PRESTADO);
     }
 
     public void devolverLibro(Libro libro) {
-        if (libro.getEstado() == Libro.Estado.DISPONIBLE) {
+        if (libro.getEstado() == EstadoLibro.DISPONIBLE) {
             System.out.println("No es posible devolver un libro que no está prestado.");
             return;
         }
 
-        libro.setEstado(Libro.Estado.DISPONIBLE);
+        libro.setEstado(EstadoLibro.DISPONIBLE);
     }
 
     public void mostrarHistorial() {

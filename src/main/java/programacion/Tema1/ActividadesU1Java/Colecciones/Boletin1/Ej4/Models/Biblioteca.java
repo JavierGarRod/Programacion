@@ -29,6 +29,6 @@ public class Biblioteca {
     }
 
     public boolean prestarLibro(){
-        return;
+        return false;
     }
 }
