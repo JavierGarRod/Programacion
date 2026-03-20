@@ -1,17 +1,18 @@
-package programacion.Tema1.ActividadesU1Java.Colecciones.Boletin2.Ej1;
+package programacion.Tema1.ActividadesU1Java.Colecciones.Boletin2.Ej1.Models;
 
 import java.time.LocalDate;
+import java.util.Collection;
 
 public class Animal implements Comparable<Animal>{
     private int id;
     private String nombre;
-    private String especie;
-    private int edad;
+     String especie;
+     int edad;
     private ClasificacionComida clasificacionComida;
     private LocalDate fechaNacimiento;
-    private double peso;
+     double peso;
     private Medio medio;
-    private ClasificacionGestacion clasificacionGestacion;
+     ClasificacionGestacion clasificacionGestacion;
 
     public Animal(int id, String nombre, String especie, int edad, ClasificacionComida clasificacionComida, LocalDate fechaNacimiento, double peso, Medio medio, ClasificacionGestacion clasificacionGestacion) {
         this.id = id;
@@ -103,6 +104,8 @@ public class Animal implements Comparable<Animal>{
         if (compNombre != 0) return compNombre;
         return Integer.compare(this.id, otro.id);
     }
+
+
 
     @Override
     public String toString() {

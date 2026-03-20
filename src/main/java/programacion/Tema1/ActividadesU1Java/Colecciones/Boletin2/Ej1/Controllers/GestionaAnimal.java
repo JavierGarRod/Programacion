@@ -1,13 +1,17 @@
-package programacion.Tema1.ActividadesU1Java.Colecciones.Boletin2.Ej1;
+package programacion.Tema1.ActividadesU1Java.Colecciones.Boletin2.Ej1.Controllers;
+
+import programacion.Tema1.ActividadesU1Java.Colecciones.Boletin2.Ej1.Models.*;
 
 import java.time.LocalDate;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 public class GestionaAnimal {
     public static void main(String[] args) {
-
         RepositorioAnimal repo = new RepositorioAnimal("FaunaWorld", "Madrid", 50000);
 
-        repo.agregarAnimal(new Animal(1, "Leo", "León", 5, ClasificacionComida.CARNIVOROS,
+        repo.agregarAnimal(new Animal(1, "Aqua", "León", 5, ClasificacionComida.CARNIVOROS,
                 LocalDate.of(2019, 3, 10), 190.5, Medio.TIERRA, ClasificacionGestacion.VIVIPAROS));
 
         repo.agregarAnimal(new Animal(2, "Aqua", "Delfín", 8, ClasificacionComida.CARNIVOROS,
@@ -24,5 +28,11 @@ public class GestionaAnimal {
 
         System.out.println("=== Animales tras modificación ===");
         repo.mostrarAnimales();
+
+        System.out.println("\n=== Animales ordenados por nombre y fecha de nacimiento ===");
+        List<Animal> animalesLista = repo.pasoDeTreeSetAList();
+
+        Collections.sort(animalesLista,new ComparadorNombreFechaAnimal());
+        System.out.println(animalesLista);
     }
 }

@@ -1,5 +1,8 @@
-package programacion.Tema1.ActividadesU1Java.Colecciones.Boletin2.Ej1;
+package programacion.Tema1.ActividadesU1Java.Colecciones.Boletin2.Ej1.Models;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import java.util.TreeSet;
 
 public class RepositorioAnimal {
@@ -13,7 +16,7 @@ public class RepositorioAnimal {
         this.nombre = nombre;
         this.lugar = lugar;
         this.presupuestoAnual = presupuestoAnual;
-        this.animales = new TreeSet<>();
+        this.animales = new  TreeSet<Animal>();
     }
 
     public boolean agregarAnimal(Animal a) {
@@ -38,5 +41,15 @@ public class RepositorioAnimal {
             }
         }
         return false;
+    }
+
+    public List<Animal> pasoDeTreeSetAList(){
+        List<Animal> animalList=new ArrayList<Animal>();
+        Iterator<Animal> iterador = this.animales.iterator();
+        while(iterador.hasNext()){
+            Animal a = iterador.next();
+            animalList.add(a);
+        }
+        return animalList;
     }
 }
