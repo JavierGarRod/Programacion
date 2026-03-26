@@ -8,7 +8,7 @@ public class EntradaVip {
     TipoEntradaVip tipoDeEntrada;
     EstadoEntradaVip estadoDeEntrada;
 
-    public EntradaVip(String codEntrada, LocalDate fechaEntrada, TipoEntradaVip tipoDeEntrada, EstadoEntradaVip estadoDeEntrada) {
+    public EntradaVip(String codEntrada, LocalDate fechaEntrada, TipoEntradaVip tipoDeEntrada) {
         this.codEntrada = codEntrada;
         this.fechaEntrada = fechaEntrada;
         this.tipoDeEntrada = tipoDeEntrada;
@@ -47,5 +47,13 @@ public class EntradaVip {
         this.estadoDeEntrada = estadoDeEntrada;
     }
 
-
+    @Override
+    public String toString() {
+        return "EntradaVip{" +
+                "codEntrada='" + codEntrada + '\'' +
+                ", fechaEntrada=" + fechaEntrada +
+                ", tipoDeEntrada=" + tipoDeEntrada +
+                ", estadoDeEntrada=" + estadoDeEntrada +
+                '}';
+    }
 }

@@ -9,12 +9,16 @@ public class Influencer {
     private String plataforma;
     EntradaVip entradaVip;
 
-    public Influencer(String nombre, String nick, int numSeguidores, String plataforma, EntradaVip entradaVip) {
+    public Influencer(String nombre, String nick, int numSeguidores, String plataforma) {
         this.nombre = nombre;
         this.nick = nick;
         this.numSeguidores = numSeguidores;
         this.plataforma = plataforma;
-        this.entradaVip = entradaVip;
+    }
+
+    public Influencer(String nick, String plataforma) {
+        this.nick = nick;
+        this.plataforma = plataforma;
     }
 
     public String getNombre() {
