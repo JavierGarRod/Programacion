@@ -52,7 +52,7 @@ public class RegistroEntradas{
         return cancelacion;
     }
 
-    public void listadoConfirmados(){
+    /*public void listadoConfirmados(){
         Set<Influencer> influencersConfirmados=new HashSet<Influencer>();
         Iterator<Map.Entry<Influencer,EntradaVip>> it= this.registro.entrySet().iterator();
 
@@ -62,7 +62,7 @@ public class RegistroEntradas{
                 influencersConfirmados.add(pareja.getKey());
             }
         }
-    }
+    }*/
 
     @Override
     public String toString() {
